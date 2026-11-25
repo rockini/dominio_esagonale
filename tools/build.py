@@ -4,7 +4,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = ROOT + '/src/'
 ORDER = [
     'sprites.js', 'units.js', 'core.js', 'map.js', 'mapgen.js', 'scenarios.js', 'armies.js',
-    'render_map.js', 'counters.js', 'ui.js',
+    'engine/scn_rules.js', 'engine/state.js', 'engine/move.js', 'engine/combat.js', 'engine/magic.js', 'engine/turn.js', 'engine/setup.js',
+    'ai/ai.js',
+    'render_map.js', 'counters.js', 'ui/app.js', 'ui/anim.js', 'ui/hud.js', 'ui/panel.js', 'ui/menu.js',
 ]
 js = '\n'.join(open(S + f, encoding='utf-8').read() for f in ORDER)
 html = '''<!DOCTYPE html>
